@@ -1,16 +1,57 @@
-## Hi there 👋
+# 👋 Hi, I’m Ahmad
 
-<!--
-**AhmadTchnology/AhmadTchnology** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🎓 University student | 💻 Developer | 🚀 Tech enthusiast
 
-Here are some ideas to get you started:
+I enjoy building practical systems that solve real-world problems, especially in **education**, **web applications**, and **hardware projects**.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🔭 Currently Working On
+
+* 📚 A **Lecture Management System** for universities
+* ⚛️ Web apps using **React** and **TypeScript**
+* ☁️ Backend & infrastructure with **Firebase** and **Cloudflare (R2 & Tunnel)**
+* 🤖 Hardware projects using **ESP32, Arduino, NFC, and IoT components**
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+* React, TypeScript
+* Tailwind CSS, shadcn/ui
+
+**Backend & Services**
+
+* Firebase Authentication
+* Cloudflare R2 & Cloudflare Tunnel
+
+**Languages**
+
+* TypeScript, JavaScript
+* Python, C++
+
+**Tools & Platforms**
+
+* Git & GitHub
+* Linux, Proxmox
+* Nextcloud
+
+**Hardware**
+
+* ESP32, Arduino
+* NFC modules, sensors
+
+---
+
+## 📫 Connect With Me
+
+* GitHub: *(your GitHub link)*
+* Email: *(your email)*
+
+---
+
+⭐️ *Always learning, always building.*
+
+---
