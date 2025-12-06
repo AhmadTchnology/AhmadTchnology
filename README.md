@@ -5,7 +5,7 @@
 
 # 🔭 I'm currently working on
 
-##📚 A Lecture Management System for universities
+##📚 A Lecture Management System for universities##
 
 ##⚛️ Web apps using React and TypeScript
 
