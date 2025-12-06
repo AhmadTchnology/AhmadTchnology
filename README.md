@@ -1,17 +1,17 @@
 # Hi 👋, I'm Ahmad
 
-### a university student and a developer with a strong interest in building practical systems
+### A university student and a developer with a strong interest in building practical systems that solve real problems, especially in education and university environments. I enjoy working on both software and hardware projects and learning by building.
 
 
 - 🔭 I'm currently working on
-- **📚 A Lecture Management System for universities
+📚 A Lecture Management System for universities
 
 ⚛️ Web apps using React and TypeScript
 
 ☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)**
 
 - 🌱 I'm currently learning
-- **React, TypeScript
+React, TypeScript
 Tailwind CSS, shadcn/ui
 Backend & Services
 Firebase Authentication
