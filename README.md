@@ -4,11 +4,12 @@
 
 
 - 🔭 I'm currently working on
+
 📚 A Lecture Management System for universities
 
 ⚛️ Web apps using React and TypeScript
 
-☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)**
+☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)
 
 - 🌱 I'm currently learning
 React, TypeScript
