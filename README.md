@@ -47,5 +47,3 @@ I enjoy building practical systems that solve real-world problems, especially in
 ---
 
 ⭐️ *Always learning, always building.*
-
----
