@@ -3,7 +3,7 @@
 ### A university student and a developer with a strong interest in building practical systems that solve real problems, especially in education and university environments. I enjoy working on both software and hardware projects and learning by building.
 
 
-- 🔭 I'm currently working on
+# 🔭 I'm currently working on
 
 📚 A Lecture Management System for universities
 
