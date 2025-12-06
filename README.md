@@ -5,16 +5,16 @@
 
 # 🔭 I'm currently working on
 
-##📚 A Lecture Management System for universities##
+📚 A Lecture Management System for universities
 
-##⚛️ Web apps using React and TypeScript
+⚛️ Web apps using React and TypeScript
 
-##☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)
+☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)
 
 
-# 📫 How to reach me **ahmadalkirsan@gmail.com**
+ 📫 How to reach me **ahmadalkirsan@gmail.com**
 
-# 👨‍💻 All of my projects are available at **[https://ahmedtech.dpdns.org/](https://ahmedtech.dpdns.org/)**
+ 👨‍💻 All of my projects are available at **[https://ahmedtech.dpdns.org/](https://ahmedtech.dpdns.org/)**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
