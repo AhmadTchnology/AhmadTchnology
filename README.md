@@ -11,13 +11,6 @@
 
 ☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)
 
-- 🌱 I'm currently learning
-React, TypeScript
-Tailwind CSS, shadcn/ui
-Backend & Services
-Firebase Authentication
-Cloudflare R2 & Cloudflare Tunnel
-Languages TypeScript, JavaScript ,Python, C++**
 
 - 📫 How to reach me **ahmadalkirsan@gmail.com**
 
