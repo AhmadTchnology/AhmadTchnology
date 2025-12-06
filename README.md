@@ -2,7 +2,6 @@
 
 ### a university student and a developer with a strong interest in building practical systems
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=AhmadTchnology&label=Profile views&color=0e75b6&style=flat" alt="AhmadTchnology" /> </p>
 
 - 🔭 I'm currently working on
 - **📚 A Lecture Management System for universities
