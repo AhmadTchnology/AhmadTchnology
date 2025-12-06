@@ -4,7 +4,7 @@
 
 I enjoy building practical systems that solve real-world problems, especially in **education**, **web applications**, and **hardware projects**.
 
-
+---
 
 ## 🔭 Currently Working On
 
@@ -13,7 +13,7 @@ I enjoy building practical systems that solve real-world problems, especially in
 * ☁️ Backend & infrastructure with **Firebase** and **Cloudflare (R2 & Tunnel)**
 * 🤖 Hardware projects using **ESP32, Arduino, NFC, and IoT components**
 
-
+---
 
 ## 🛠️ Tech Stack
 
@@ -47,8 +47,8 @@ I enjoy building practical systems that solve real-world problems, especially in
 
 ## 📫 Connect With Me
 
-* GitHub: *(your GitHub link)*
-* Email: *(your email)*
+* GitHub: *https://github.com/AhmadTchnology*
+* Email: *ahmadalkirsan@gmail.com*
 
 ---
 
