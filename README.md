@@ -2,7 +2,7 @@
 
 🎓 University student | 💻 Developer | 🚀 Tech enthusiast
 
-I enjoy building practical systems that solve real-world problems, especially in **education**, **web applications**, and **hardware projects**.
+I enjoy building practical systems that solve real-world problems, especially in **education**, **web applications**.
 
 ---
 
@@ -11,7 +11,6 @@ I enjoy building practical systems that solve real-world problems, especially in
 * 📚 A **Lecture Management System** for universities
 * ⚛️ Web apps using **React** and **TypeScript**
 * ☁️ Backend & infrastructure with **Firebase** and **Cloudflare (R2 & Tunnel)**
-* 🤖 Hardware projects using **ESP32, Arduino, NFC, and IoT components**
 
 ---
 
@@ -37,11 +36,6 @@ I enjoy building practical systems that solve real-world problems, especially in
 * Git & GitHub
 * Linux, Proxmox
 * Nextcloud
-
-**Hardware**
-
-* ESP32, Arduino
-* NFC modules, sensors
 
 ---
 
