@@ -1,4 +1,4 @@
-# Hi 👋, I'm Ahmad
+# Hi 👋, I'm Ahmed
 
 ### A university student and a developer with a strong interest in building practical systems that solve real problems, especially in education and university environments. I enjoy working on both software and hardware projects and learning by building.
 
