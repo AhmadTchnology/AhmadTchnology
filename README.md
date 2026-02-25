@@ -14,7 +14,7 @@
 
  📫 How to reach me **ahmadalkirsan@gmail.com**
 
- 👨‍💻 All of my projects are available at **[https://ahmedtech.dpdns.org/](https://ahmedtech.dpdns.org/)**
+ 👨‍💻 All of my projects are available at **[ahmedtech.dpdns.org](https://ahmedtech.dpdns.org/)**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
