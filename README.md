@@ -3,7 +3,6 @@
 ### A university student and a developer with a strong interest in building practical systems that solve real problems, especially in education and university environments. I enjoy working on both software and hardware projects and learning by building.
 
 ###
-###
 
 <div align="center">
   <a href="[ahmad_technology]https://linkedin.com/in/ahmed-technology" target="_blank">
@@ -16,10 +15,16 @@
   <a href="[ahmad_technology]ahmadalkirsan@gmail.com" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="gmail logo"  />
   </a>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=AhmadTchnology.AhmadTchnology&"  />
 </div>
 
 ###
+
+###
+
+<div align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=AhmadTchnology.AhmadTchnology&"  />
+</div>
+
 ###
 
 
@@ -38,7 +43,7 @@
 
 
 
-<h3 align="left">Languages and Tools:</h3>
+<h3 padding-top="100px" align="left">Languages and Tools:</h3>
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts" height="40" alt="typescript logo"  />
