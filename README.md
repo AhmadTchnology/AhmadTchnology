@@ -1,38 +1,42 @@
-<h1 align="center">Hi 👋, I'm Ahmed</h1>
+# Hi 👋, I'm Ahmed
+
+### A university student and a developer with a strong interest in building practical systems that solve real problems, especially in education and university environments. I enjoy working on both software and hardware projects and learning by building.
 
 ###
 
 <div align="center">
-  <a href="www.linkedin.com/in/ahmed-technology" target="_blank">
+  <a href="[ahmad_technology]https://linkedin.com/in/ahmed-technology" target="_blank">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
   </a>
   <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="instagram logo"  />
-  <a href="ahmadtechnology" target="_blank">
+  <a href="[ahmad_technology]https://instagram.com/ahmad_technology" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="discord logo"  />
   </a>
-  <a href="ahmadalkirsan@gmail.com" target="_blank">
+  <a href="[ahmad_technology]ahmadalkirsan@gmail.com" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="gmail logo"  />
   </a>
-</div>
-
-###
-
-<div align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=AhmadTchnology.AhmadTchnology&"  />
 </div>
 
 ###
 
-<h3 align="left">A university student and a developer with a strong interest in building practical systems that solve real problems, especially in education and university environments. I enjoy working on both software and hardware projects and learning by building.</h3>
 
-###
+# 🔭 I'm currently working on
 
-<h2 align="left">🔭 I'm currently working on</h2>
+📚 A Lecture Management System for universities
 
-###
+⚛️ Web apps using React and TypeScript
 
-<h4 align="left">📚 A Lecture Management System for universities<br><br>⚛️ Web apps using React and TypeScript<br><br>☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)</h4>
+☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)
 
+
+ 📫 How to reach me **ahmadalkirsan@gmail.com**
+
+ 👨‍💻 All of my projects are available at **[ahmedtech.engineer](https://ahmedtech.engineer/)**
+
+
+
+<h3 align="left">Languages and Tools:</h3>
 ###
 
 <div align="center">
@@ -93,6 +97,6 @@
 
 ###
 
-<h5 align="left">⭐️ Always learning, always building.</h5>
+⭐️ *Always learning, always building.*
 
 ###
