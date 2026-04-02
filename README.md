@@ -3,6 +3,7 @@
 ### A university student and a developer with a strong interest in building practical systems that solve real problems, especially in education and university environments. I enjoy working on both software and hardware projects and learning by building.
 
 ###
+###
 
 <div align="center">
   <a href="[ahmad_technology]https://linkedin.com/in/ahmed-technology" target="_blank">
@@ -18,6 +19,7 @@
   <img src="https://visitor-badge.laobi.icu/badge?page_id=AhmadTchnology.AhmadTchnology&"  />
 </div>
 
+###
 ###
 
 
@@ -37,7 +39,6 @@
 
 
 <h3 align="left">Languages and Tools:</h3>
-###
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts" height="40" alt="typescript logo"  />
