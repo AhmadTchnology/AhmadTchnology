@@ -43,7 +43,7 @@
 
 
 
-<h3 padding-top="100px" align="left">Languages and Tools:</h3>
+<h3 align="left">Languages and Tools:</h3>
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts" height="40" alt="typescript logo"  />
