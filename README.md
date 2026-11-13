@@ -1,8 +1,8 @@
 # Hi 👋, I'm Ahmed
 
-### A university student and a developer with a strong interest in building practical systems that solve real problems, especially in education and university environments. I enjoy working on both software and hardware projects and learning by building.
+### University student, full-stack developer, and hardware tinkerer building under **Utopia Tech**.
 
-###
+I like building practical systems that solve real problems, from education platforms and web apps to embedded AI devices and DIY gadgets. I move between React and TypeScript on the web side and ESP32 / Raspberry Pi on the hardware side, and I learn best by building things.
 
 <div align="center">
   <a href="https://linkedin.com/in/ahmed-technology" target="_blank">
@@ -11,79 +11,59 @@
   <a href="https://instagram.com/ahmad_technology" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="instagram logo"  />
   </a>
+  <a href="https://ahmedtech.engineer/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Portfolio&logo=googlechrome&label=&color=111827&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="portfolio"  />
+  </a>
+  <a href="mailto:ahmadalkirsan@gmail.com">
+    <img src="https://img.shields.io/static/v1?message=Email&logo=gmail&label=&color=EA4335&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="email"  />
+  </a>
 </div>
-
-###
-
-###
 
 <div align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=AhmadTchnology.AhmadTchnology&"  />
 </div>
 
-###
+---
 
+## 🔭 What I'm working on right now
 
-# 🔭 I'm currently working on
+| Project | What it is | Stack |
+|---|---|---|
+| 🎵 **[CYD iPod](https://github.com/AhmadTchnology/Ipod_DIY)** | An iPod-style music player on the ESP32-2432S028 "Cheap Yellow Display": SD card library, now-playing screen, Bluetooth earphone output, and a battery-saving settings tab | C++, ESP32, TFT_eSPI |
+| 🕹️ **PSP YouTube Client** | Homebrew YouTube app for the PSP, backed by a one-click PC relay server that transcodes video to PSP-native H.264 | Python, yt-dlp, ffmpeg, C |
+| 📻 **[uTune Jukebox](https://github.com/AhmadTchnology/uTune-Jukebox)** | A physical jukebox: tap an RFID card that stores a YouTube link and the track joins the queue | Python, Pygame, mpv, SQLite |
+| 🕶️ **[Smart Assistive Glasses](https://github.com/AhmadTchnology/Deaf_AI_Glasses)** | Wearable assistive device for deaf, mute, and blind users with sign and speech recognition running on a Raspberry Pi 5 | Python, LSTM, MediaPipe, Pygame |
+| 📚 **Lecture Management System** | A platform for universities to manage and deliver lectures | React, TypeScript, Firebase, Cloudflare R2 & Tunnel |
 
-📚 A Lecture Management System for universities
+## 🧪 More things I've built or am exploring
 
-⚛️ Web apps using React and TypeScript
+- 🎸 **Air Guitar Gloves**: flex sensors and an IMU trigger real guitar samples from hand gestures (Raspberry Pi Zero 2 W + I2S DAC)
+- 🚗 **MeshRide**: an offline BLE-mesh ride-sharing concept for taxi and delivery matching, with no accounts or central servers
+- 🎧 **MidTune**: an Android music player (OuterTune fork) with Spotify playlist import via OAuth PKCE
+- 🗂️ **ESP32-S3 RFID storage device**: a 5" SPI screen, an RFID reader, and SD storage in one gadget
+- 🧊 **Blender**: procedural 3D scenes built from code
 
-☁️ Backend & infrastructure with Firebase and Cloudflare (R2 & Tunnel)
+## 🛠️ Languages & Tools
 
+**Web**
 
- 📫 How to reach me **ahmadalkirsan@gmail.com**
+<img src="https://skillicons.dev/icons?i=ts,react,nextjs,nodejs,js,tailwind,bootstrap" height="40" alt="web stack" />
 
- 👨‍💻 All of my projects are available at **[ahmedtech.engineer](https://ahmedtech.engineer/)**
+**Backend, data & cloud**
 
+<img src="https://skillicons.dev/icons?i=firebase,postgres,mongodb,docker,cloudflare" height="40" alt="backend stack" />
 
+**Embedded, hardware & systems**
 
-<h3 align="left">Languages and Tools:</h3>
+<img src="https://skillicons.dev/icons?i=c,cpp,py,arduino,raspberrypi,linux" height="40" alt="embedded stack" />
 
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=ts" height="40" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="nextjs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="40" alt="flutter logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="bootstrap logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" alt="mongodb logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="docker logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" height="40" alt="android logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=py" height="40" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="40" alt="c logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="40" alt="cplusplus logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" height="40" alt="unity logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" height="40" alt="unrealengine logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="linux logo"  />
-</div>
+**Mobile, games & 3D**
 
-###
+<img src="https://skillicons.dev/icons?i=flutter,kotlin,androidstudio,cs,unity,unreal,blender" height="40" alt="mobile and 3D stack" />
+
+---
+
+## 📈 Contribution graph
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AhmadTchnology/AhmadTchnology/output/pacman-contribution-graph-dark.svg">
@@ -91,8 +71,8 @@
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/AhmadTchnology/AhmadTchnology/output/pacman-contribution-graph.svg">
 </picture>
 
-###
+## 📫 Get in touch
+
+Email: **ahmadalkirsan@gmail.com** · Portfolio and all projects: **[ahmedtech.engineer](https://ahmedtech.engineer/)**
 
 ⭐️ *Always learning, always building.*
-
-###
