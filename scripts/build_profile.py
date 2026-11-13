@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Builds profile.svg: the whole GitHub profile as ONE animated SVG widget.
+"""Builds the profile widget: one animated canvas, cut into seamless SVG slices
+so the buttons and project cards can be real links (GitHub blocks links inside images).
+Writes widget/sNN.svg and README.md.
 
 Run locally:   python scripts/build_profile.py
 With real contribution data: set GH_TOKEN (the GitHub Action does this for you).
@@ -10,7 +12,7 @@ from xml.sax.saxutils import escape as esc
 
 USER = os.environ.get("GH_USER", "AhmadTchnology")
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.environ.get("OUT_PATH", os.path.join(HERE, "..", "profile.svg"))
+ROOT = os.path.abspath(os.environ.get("OUT_ROOT", os.path.join(HERE, "..")))
 
 BG, BG2, TRACE, TEAL, GOLD = "#0B1E2D", "#0F2F3F", "#1F6272", "#5EEAD4", "#FFC857"
 TEXT, MUTED, SOFT = "#E8F1F2", "#8FB3BB", "#9CC3CB"
@@ -111,15 +113,19 @@ HEADER_INNER = r"""<defs>
     </text>
   </g>"""
 
-LINKS = [("LinkedIn", 190), ("Instagram", 190), ("Portfolio", 190), ("ahmadalkirsan@gmail.com", 320)]
+LINKS = [("LinkedIn", "https://linkedin.com/in/ahmed-technology"),
+         ("Instagram", "https://instagram.com/ahmad_technology"),
+         ("Portfolio", "https://ahmedtech.engineer/"),
+         ("Email", "mailto:ahmadalkirsan@gmail.com")]
+PORTFOLIO = "https://ahmedtech.engineer/"
 
 PROJECTS = [
-    ("CYD iPod", TEAL, ["An iPod-style music player on the ESP32 Cheap Yellow", "Display, with an SD card library and Bluetooth audio."], "C++, ESP32, TFT_eSPI"),
-    ("uTune Jukebox", TEAL, ["Tap an RFID card that stores a YouTube link and the", "track joins the play queue."], "Python, Pygame, mpv, SQLite"),
-    ("Smart Assistive Glasses", TEAL, ["Wearable device for deaf, mute, and blind users with", "sign and speech recognition on a Raspberry Pi 5."], "Python, LSTM, MediaPipe, Pi 5"),
-    ("PSP YouTube Client", TEAL, ["Homebrew YouTube app for the PSP, fed by a one-click", "PC relay server that transcodes video."], "Python, yt-dlp, ffmpeg, C"),
-    ("Lecture Management System", TEAL, ["A platform for universities to manage and deliver", "lectures."], "React, TypeScript, Firebase, Cloudflare R2"),
-    ("More experiments", GOLD, ["Air Guitar Gloves, MeshRide, MidTune, an ESP32-S3 RFID", "storage device, and procedural Blender scenes."], "Full list at ahmedtech.engineer"),
+    ("CYD iPod", TEAL, ["An iPod-style music player on the ESP32 Cheap Yellow", "Display, with an SD card library and Bluetooth audio."], "C++, ESP32, TFT_eSPI", "https://github.com/AhmadTchnology/Ipod_DIY"),
+    ("uTune Jukebox", TEAL, ["Tap an RFID card that stores a YouTube link and the", "track joins the play queue."], "Python, Pygame, mpv, SQLite", "https://github.com/AhmadTchnology/uTune-Jukebox"),
+    ("Smart Assistive Glasses", TEAL, ["Wearable device for deaf, mute, and blind users with", "sign and speech recognition on a Raspberry Pi 5."], "Python, LSTM, MediaPipe, Pi 5", "https://github.com/AhmadTchnology/Deaf_AI_Glasses"),
+    ("PSP YouTube Client", TEAL, ["Homebrew YouTube app for the PSP, fed by a one-click", "PC relay server that transcodes video."], "Python, yt-dlp, ffmpeg, C", PORTFOLIO),
+    ("Lecture Management System", TEAL, ["A platform for universities to manage and deliver", "lectures."], "React, TypeScript, Firebase, Cloudflare R2", PORTFOLIO),
+    ("More experiments", GOLD, ["Air Guitar Gloves, MeshRide, MidTune, an ESP32-S3 RFID", "storage device, and procedural Blender scenes."], "Full list at ahmedtech.engineer", PORTFOLIO),
 ]
 
 STACK = [
@@ -132,6 +138,8 @@ STACK = [
 ABOUT = ["I build practical systems that solve real problems, especially in education and",
          "university life. Most of my work sits where software meets hardware, and I learn",
          "by building. Everything ships under the Utopia Tech name."]
+
+CARD_W, CARD_H, ROW_GAP = 470, 160, 14
 
 
 def fetch_contributions():
@@ -163,42 +171,31 @@ def section(y, title):
 
 
 def pills(y):
-    gap = 14
-    total = sum(w for _, w in LINKS) + gap * (len(LINKS) - 1)
-    x = (W - total) / 2
     out = ""
-    for i, (label, w) in enumerate(LINKS):
-        out += (f'<g transform="translate({x:.0f},{y})">'
-                f'<rect x="1" y="1" width="{w-2}" height="46" rx="16" fill="{BG}" stroke="{TRACE}" stroke-width="2"/>'
-                f'<circle cx="26" cy="24" r="5" fill="{TEAL}" filter="url(#g)"><animate attributeName="opacity" values="1;0.25;1" dur="{2+i*0.4}s" repeatCount="indefinite"/></circle>'
-                f'<text x="44" y="30" font-family="{MONO}" font-size="16" fill="{TEXT}">{esc(label)}</text></g>')
-        x += w + gap
+    for i, (label, _) in enumerate(LINKS):
+        out += (f'<g transform="translate({i*250+12},{y})">'
+                f'<rect x="1" y="1" width="224" height="46" rx="16" fill="{BG}" stroke="{TRACE}" stroke-width="2"/>'
+                f'<circle cx="28" cy="24" r="5" fill="{TEAL}" filter="url(#g)"><animate attributeName="opacity" values="1;0.25;1" dur="{2+i*0.4}s" repeatCount="indefinite"/></circle>'
+                f'<text x="48" y="30" font-family="{MONO}" font-size="17" fill="{TEXT}">{esc(label)}</text></g>')
     return out
 
 
 def about(y):
-    out = ""
-    for i, line in enumerate(ABOUT):
-        out += f'<text x="40" y="{y + 20 + i*34}" font-family="{SANS}" font-size="21" fill="{TEXT if i == 0 else "#B9CFD3"}">{esc(line)}</text>'
+    return "".join(f'<text x="40" y="{y + 20 + i*34}" font-family="{SANS}" font-size="21" fill="{TEXT if i == 0 else "#B9CFD3"}">{esc(line)}</text>'
+                   for i, line in enumerate(ABOUT))
+
+
+def card(i, x, y):
+    name, led, desc, stack, _ = PROJECTS[i]
+    out = (f'<g transform="translate({x},{y})">'
+           f'<rect x="1" y="1" width="{CARD_W-2}" height="{CARD_H-2}" rx="16" fill="{BG}" stroke="{TRACE}" stroke-width="2"/>'
+           f'<circle cx="32" cy="36" r="5.5" fill="{led}" filter="url(#g)"><animate attributeName="opacity" values="1;0.25;1" dur="{1.8+0.3*i}s" repeatCount="indefinite"/></circle>'
+           f'<text x="50" y="42" font-family="{MONO}" font-size="19" font-weight="700" fill="{TEXT}">{esc(name)}</text>')
+    for j, line in enumerate(desc):
+        out += f'<text x="30" y="{78+j*24}" font-family="{SANS}" font-size="15.5" fill="{SOFT}">{esc(line)}</text>'
+    out += (f'<text x="30" y="136" font-family="{MONO}" font-size="13.5" fill="{led}">{esc(stack)}</text>'
+            f'<circle r="3.5" fill="{GOLD}" filter="url(#g)"><animateMotion dur="5s" begin="-{i*0.8}s" repeatCount="indefinite" path="M20 {CARD_H-2} H{CARD_W-20}"/></circle></g>')
     return out
-
-
-def projects(y):
-    cw, ch, gap = 470, 160, 20
-    out = ""
-    for i, (name, led, desc, stack) in enumerate(PROJECTS):
-        cx = 20 + (i % 2) * (cw + gap)
-        cy = y + (i // 2) * (ch + 14)
-        out += (f'<g transform="translate({cx},{cy})">'
-                f'<rect x="1" y="1" width="{cw-2}" height="{ch-2}" rx="16" fill="{BG}" stroke="{TRACE}" stroke-width="2"/>'
-                f'<circle cx="32" cy="36" r="5.5" fill="{led}" filter="url(#g)"><animate attributeName="opacity" values="1;0.25;1" dur="{1.8+0.3*i}s" repeatCount="indefinite"/></circle>'
-                f'<text x="50" y="42" font-family="{MONO}" font-size="19" font-weight="700" fill="{TEXT}">{esc(name)}</text>')
-        for j, line in enumerate(desc):
-            out += f'<text x="30" y="{78+j*24}" font-family="{SANS}" font-size="15.5" fill="{SOFT}">{esc(line)}</text>'
-        out += (f'<text x="30" y="136" font-family="{MONO}" font-size="13.5" fill="{led}">{esc(stack)}</text>'
-                f'<circle r="3.5" fill="{GOLD}" filter="url(#g)"><animateMotion dur="5s" begin="-{i*0.8}s" repeatCount="indefinite" path="M20 {ch-2} H{cw-20}"/></circle></g>')
-    rows = math.ceil(len(PROJECTS) / 2)
-    return out, rows * ch + (rows - 1) * 14
 
 
 def stack(y):
@@ -238,8 +235,7 @@ def contributions(y, cal):
         if days and days[0]["date"]:
             m = int(days[0]["date"][5:7])
             if m != last_month:
-                label = date(2000, m, 1).strftime("%b")
-                out += f'<text x="{x0 + wi*pitch:.0f}" y="36" font-family="{SANS}" font-size="13" fill="{MUTED}">{label}</text>'
+                out += f'<text x="{x0 + wi*pitch:.0f}" y="36" font-family="{SANS}" font-size="13" fill="{MUTED}">{date(2000, m, 1).strftime("%b")}</text>'
                 last_month = m
         for di, d in enumerate(days):
             c = d["contributionCount"]
@@ -268,40 +264,82 @@ def footer(y):
             f'<circle r="4" fill="{TEAL}" filter="url(#g)"><animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="{R}"/></circle></g>'), 90
 
 
+def svg_for(parts, H, vb):
+    x0, y0, x1, y1 = vb
+    inner = "".join(s for (a, b, c, d, s) in parts if a < x1 and c > x0 and b < y1 and d > y0)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="{x0} {y0} {x1-x0} {y1-y0}" width="{x1-x0}" height="{y1-y0}" role="img">'
+            f'<defs><clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath>'
+            f'<filter id="g" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'
+            f'<g clip-path="url(#clip)"><rect width="{W}" height="{H}" fill="{BG}"/>{inner}</g>'
+            f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="16" fill="none" stroke="{TRACE}" stroke-width="2"/></svg>')
+
+
 def build():
+    widget_dir = os.path.join(ROOT, "widget")
     try:
         cal = fetch_contributions()
     except Exception as exc:  # keep the previous widget instead of wiping the graph
         print("Could not fetch contributions:", exc, file=sys.stderr)
-        if os.path.exists(OUT):
+        if os.path.isdir(widget_dir):
             sys.exit(1)
         cal = None
 
-    y = 300
-    parts = []
-    y += 22; parts.append(pills(y)); y += 48 + 32
-    parts.append(section(y, "About")); y += 56 + 16
-    parts.append(about(y)); y += 20 + 2 * 34 + 30
-    parts.append(section(y, "Projects")); y += 56 + 18
-    body, h = projects(y); parts.append(body); y += h + 30
-    parts.append(section(y, "Tech stack")); y += 56 + 18
-    body, h = stack(y); parts.append(body); y += h + 30
-    parts.append(section(y, "Activity")); y += 56 + 18
-    body, h = contributions(y, cal); parts.append(body); y += h + 20
-    body, h = footer(y); parts.append(body); y += h
+    parts = [(0, 0, W, 300, f'<g>{HEADER_INNER}</g>')]
+    y = 300 + 22
+    py = y
+    parts.append((0, y, W, y + 48, pills(y))); y += 48 + 32
+    parts.append((0, y, W, y + 56, section(y, "About"))); y += 56 + 16
+    parts.append((0, y, W, y + 110, about(y))); y += 20 + 2 * 34 + 30
+    parts.append((0, y, W, y + 56, section(y, "Projects"))); y += 56 + 18
+    cards_y = y
+    for i in range(len(PROJECTS)):
+        cx = 20 + (i % 2) * (CARD_W + 20)
+        cy = cards_y + (i // 2) * (CARD_H + ROW_GAP)
+        parts.append((cx, cy, cx + CARD_W, cy + CARD_H, card(i, cx, cy)))
+    rows = math.ceil(len(PROJECTS) / 2)
+    y = cards_y + rows * CARD_H + (rows - 1) * ROW_GAP + 30
+    parts.append((0, y, W, y + 56, section(y, "Tech stack"))); y += 56 + 18
+    body, h = stack(y); parts.append((0, y, W, y + h, body)); y += h + 30
+    parts.append((0, y, W, y + 56, section(y, "Activity"))); y += 56 + 18
+    body, h = contributions(y, cal); parts.append((0, y, W, y + h, body)); y += h + 20
+    body, h = footer(y); parts.append((0, y, W, y + h, body)); y += h
     H = y
 
-    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="t d">'
-           f'<title id="t">Ahmed, university student and full-stack developer</title>'
-           f'<desc id="d">Profile widget: about, projects (CYD iPod, uTune Jukebox, Smart Assistive Glasses, PSP YouTube Client, Lecture Management System), tech stack, and contribution activity.</desc>'
-           f'<defs><clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath>'
-           f'<filter id="g" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'
-           f'<g clip-path="url(#clip)"><rect width="{W}" height="{H}" fill="{BG}"/>'
-           f'<g>{HEADER_INNER}</g>' + "".join(parts) + '</g>'
-           f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="16" fill="none" stroke="{TRACE}" stroke-width="2"/></svg>')
-    with open(OUT, "w", encoding="utf-8") as f:
-        f.write(svg)
-    print("wrote", os.path.abspath(OUT), f"({W}x{H})", "with live contributions" if cal else "with empty contribution grid")
+    # bands of slices: each band is a row of (viewbox, href, alt, width%)
+    cards_end = cards_y + rows * CARD_H + (rows - 1) * ROW_GAP
+    bands = [[((0, 0, W, py - 8), None, "Ahmed, university student and full-stack developer", 100)],
+             [((i * 250, py - 8, (i + 1) * 250, py + 56), href, label, 25) for i, (label, href) in enumerate(LINKS)],
+             [((0, py + 56, W, cards_y - 7), None, "About: I build practical systems that solve real problems, especially in education and university life. Most of my work sits where software meets hardware.", 100)]]
+    for r in range(rows):
+        top = cards_y + r * (CARD_H + ROW_GAP) - 7
+        row = []
+        for c in range(2):
+            idx = r * 2 + c
+            if idx < len(PROJECTS):
+                row.append(((c * 500, top, (c + 1) * 500, top + CARD_H + 14), PROJECTS[idx][4], PROJECTS[idx][0], 50))
+        bands.append(row)
+    bands.append([((0, cards_end + 7, W, H), None, "Tech stack, contribution activity, and footer: Always learning, always building.", 100)])
+
+    import shutil
+    shutil.rmtree(widget_dir, ignore_errors=True)
+    os.makedirs(widget_dir)
+    lines, n = [], 0
+    for band in bands:
+        row = ""
+        for vb, href, alt, pct in band:
+            name = f"s{n:02d}.svg"; n += 1
+            with open(os.path.join(widget_dir, name), "w", encoding="utf-8") as f:
+                f.write(svg_for(parts, H, vb))
+            img = f'<img src="./widget/{name}" alt="{esc(alt, {chr(34): "&quot;"})}" width="{pct}%" align="top" />'
+            row += f'<a href="{href}">{img}</a>' if href else img
+        lines.append(row)
+    readme = '<div align="center">\n' + "\n".join(lines) + '\n</div>\n'
+    with open(os.path.join(ROOT, "README.md"), "w", encoding="utf-8") as f:
+        f.write(readme)
+    if os.environ.get("PREVIEW"):
+        with open(os.path.join(ROOT, "preview.svg"), "w", encoding="utf-8") as f:
+            f.write(svg_for(parts, H, (0, 0, W, H)))
+    print("wrote", n, "slices to", widget_dir, f"(canvas {W}x{H})", "with live contributions" if cal else "with empty contribution grid")
 
 
 if __name__ == "__main__":
