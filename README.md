@@ -33,7 +33,7 @@ I like building practical systems that solve real problems, from education platf
 | 🕹️ **PSP YouTube Client** | Homebrew YouTube app for the PSP, backed by a one-click PC relay server that transcodes video to PSP-native H.264 | Python, yt-dlp, ffmpeg, C |
 | 📻 **[uTune Jukebox](https://github.com/AhmadTchnology/uTune-Jukebox)** | A physical jukebox: tap an RFID card that stores a YouTube link and the track joins the queue | Python, Pygame, mpv, SQLite |
 | 🕶️ **[Smart Assistive Glasses](https://github.com/AhmadTchnology/Deaf_AI_Glasses)** | Wearable assistive device for deaf, mute, and blind users with sign and speech recognition running on a Raspberry Pi 5 | Python, LSTM, MediaPipe, Pygame |
-| 📚 **Lecture Management System** | A platform for universities to manage and deliver lectures | React, TypeScript, Firebase, Cloudflare R2 & Tunnel |
+| 📚 **[Lecture Management System](https://github.com/AhmadTchnology/Lectures_System_Web)** | A platform for universities to manage and deliver lectures | React, TypeScript, Firebase, Cloudflare R2 & Tunnel |
 
 ## 🧪 More things I've built or am exploring
 
